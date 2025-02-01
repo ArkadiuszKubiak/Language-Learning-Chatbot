@@ -107,7 +107,7 @@ You will also need an **OpenAI API key** to interact with the GPT-4o-mini model.
 5. Run the Flask backend:
 
    ```bash
-   python app.py
+   python backen.py
    ```
 
    Your backend will be running at `http://localhost:5000`.
@@ -143,14 +143,25 @@ You will also need an **OpenAI API key** to interact with the GPT-4o-mini model.
 
 ```
 .
-├── app.py              # Main Flask application
-├── .env                # Environment variables (for OpenAI API key)
-├── requirements.txt    # Python dependencies
-├── frontend/           # React frontend
-│   ├── src/            # React source files
-│   ├── public/         # Public assets
-│   └── package.json    # Node.js dependencies
-└── README.md           # Project documentation
+├── backend.py
+├── language-learning-app
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public
+│   │   └── vite.svg
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── assets
+│   │   │   └── react.svg
+│   │   ├── components
+│   │   │   └── LanguageLearningApp.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   └── vite.config.js
+└── README.md
 ```
 
 ## Example Interaction
@@ -158,7 +169,7 @@ You will also need an **OpenAI API key** to interact with the GPT-4o-mini model.
 Here’s an example of how the chatbot might interact with the user:
 
 - **User**: "How do you say 'hello' in Polish?"
-- **AI**: "In Polish, 'hello' is 'cześć'. It's a common greeting used during the day. Would you like to practice using it in a sentence?"
+- **Bot**: "In Polish, 'hello' is 'cześć'. It's a common greeting used during the day. Would you like to practice using it in a sentence?"
 
 ## Contributing
 
