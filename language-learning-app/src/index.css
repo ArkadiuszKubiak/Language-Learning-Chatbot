@@ -1,0 +1,37 @@
+/* Resetowanie domyślnych stylów przeglądarki */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Podstawowy styl dla elementu body */
+body {
+  font-family: 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Ustawienie stylów dla elementów HTML */
+html {
+  font-size: 16px;
+}
+
+/* Styl dla głównego kontenera */
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dodanie stylu dla h1, h2, h3, h4, h5, h6 */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}

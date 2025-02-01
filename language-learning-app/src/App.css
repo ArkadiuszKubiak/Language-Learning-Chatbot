@@ -1,0 +1,77 @@
+/* Settings for the main container */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+}
+
+/* Card */
+.chat-card {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Chat history */
+.chat-history {
+  max-height: 700px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Messages */
+.chat-message {
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+  max-width: 80%;
+}
+
+.user-message {
+  background-color: #d1e7fd;
+  align-self: flex-start;
+}
+
+.bot-message {
+  background-color: #f1f1f1;
+  align-self: flex-end;
+}
+
+/* Container for Input and Button */
+.input-container {
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space between the input and button */
+  align-items: center; /* Vertically center the items */
+  width: 100%; /* Ensure the container takes up full width */
+}
+
+/* Input */
+.chat-input {
+  width: 85%; /* Input takes up 85% of the container width */
+  height: 40px; /* Set height to match the button */
+}
+
+/* Custom Button styles */
+.custom-button {
+  background-color: #66a0f3; /* Green */
+  color: white; /* White text */
+  margin-left: 10px; /* Space between input and button */
+  height: 40px; /* Match the height of the input */
+  width: 15%; /* Button takes up 15% of the container width */
+  display: inline-flex; /* Ensure the button doesn't stretch */
+  align-items: center; /* Vertically center text inside button */
+}
+
+.custom-button:hover {
+  background-color: #0404b7; /* Lighter green on hover */
+}
