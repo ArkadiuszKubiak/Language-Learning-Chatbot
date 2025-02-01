@@ -27,7 +27,7 @@ export default function LanguageLearningApp() {
 
     try {
       // Send message to the backend
-      const response = await fetch('http://localhost:5000/chat', {
+      const response = await fetch('http://16.171.21.44:5000/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message }),
