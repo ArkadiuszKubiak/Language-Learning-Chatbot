@@ -8,6 +8,7 @@ const { Text } = Typography;
 export default function LanguageLearningApp() {
   const [message, setMessage] = useState('');
   const [chatHistory, setChatHistory] = useState([]); // Chat history
+  const [loading, setLoading] = useState(false); // Loading state for the button
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
@@ -18,6 +19,13 @@ export default function LanguageLearningApp() {
 
   const handleSendMessage = async () => {
     if (!message) return;
+
+    const tempMessage = message;
+
+    setMessage(''); // Reset user message
+
+    // Disable the button while waiting for the backend response
+    setLoading(true);
 
     // Add user message to chat history
     setChatHistory((prevChatHistory) => [
@@ -58,7 +66,9 @@ export default function LanguageLearningApp() {
       ]);
     }
 
+    // Reset user message and enable the button
     setMessage(''); // Reset user message
+    setLoading(false); // Re-enable the button
   };
 
   return (
@@ -90,6 +100,8 @@ export default function LanguageLearningApp() {
             type="primary"
             onClick={handleSendMessage}
             className="custom-button"
+            loading={loading} // Show a loading spinner on the button
+            disabled={loading} // Disable the button while loading
           >
             Send
           </Button>
