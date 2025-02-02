@@ -1,13 +1,33 @@
 /* Settings for the main container */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .app-container {
+  position: relative; /* Pozycjonowanie dla innych elementów w tym kontenerze */
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #f0f2f5;
-  padding: 0;
-  margin: 0;
-  flex-direction: column;
+  height: 100vh; /* Pełna wysokość ekranu */
+  width: 100vw; /* Pełna szerokość ekranu */
+  overflow: hidden; /* Ukrywa wszelkie przewijanie */
+}
+
+.app-container::before {
+  content: '';
+  position: fixed; /* Tło będzie przyklejone do ekranu */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/background.webp');
+  background-size: cover; /* Tło pokrywa cały ekran */
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1; /* Tło zawsze za zawartością */
 }
 
 /* Card */
