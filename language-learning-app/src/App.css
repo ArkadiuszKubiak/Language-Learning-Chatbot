@@ -52,7 +52,7 @@
 /* Messages */
 .chat-message {
   border-radius: 8px;
-  padding: 10px;
+  padding: 30px;
   margin-bottom: 8px;
   max-width: 80%;
 }
