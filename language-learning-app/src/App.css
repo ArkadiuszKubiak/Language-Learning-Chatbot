@@ -7,27 +7,27 @@
 }
 
 .app-container {
-  position: relative; /* Pozycjonowanie dla innych elementów w tym kontenerze */
+  position: relative; /* Positioning for other elements inside this container */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Pełna wysokość ekranu */
-  width: 100vw; /* Pełna szerokość ekranu */
-  overflow: hidden; /* Ukrywa wszelkie przewijanie */
+  height: 100vh; /* Full screen height */
+  width: 100vw; /* Full screen width */
+  overflow: hidden; /* Hides any scrolling */
 }
 
 .app-container::before {
   content: '';
-  position: fixed; /* Tło będzie przyklejone do ekranu */
+  position: fixed; /* Background will be pinned to the screen */
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-image: url('/background.webp');
-  background-size: cover; /* Tło pokrywa cały ekran */
+  background-size: cover; /* Background covers the entire screen */
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1; /* Tło zawsze za zawartością */
+  z-index: -1; /* Background is always behind the content */
 }
 
 /* Card */
