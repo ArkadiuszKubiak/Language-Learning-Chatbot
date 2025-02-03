@@ -30,6 +30,16 @@
   z-index: -1; /* Background is always behind the content */
 }
 
+/* Adjusting the list to prevent the points from going outside the container */
+div ul,
+div ol {
+  margin-left: 20px; /* Setting indentation for the entire list */
+  padding-left: 20px; /* Ensures that the points are properly aligned */
+}
+
+div li {
+  margin-bottom: 5px; /* You can adjust the spacing between list items */
+}
 /* Card */
 .chat-card {
   width: 100%;
@@ -52,9 +62,9 @@
 /* Messages */
 .chat-message {
   border-radius: 8px;
-  padding: 30px;
   margin-bottom: 8px;
   max-width: 80%;
+  padding: 10px;
 }
 
 .user-message {
