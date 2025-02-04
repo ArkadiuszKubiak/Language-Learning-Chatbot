@@ -1,0 +1,16 @@
+[Unit]
+Description=Backend Learning Mentor Service
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/project/Language-Learning-Chatbot
+ExecStart=/home/ubuntu/myenv/bin/gunicorn --workers 3 --bind 0.0.0.0:5000 backend:app
+Restart=always
+RestartSec=5
+Environment="PATH=/home/ubuntu/myenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Environment= "OPENAI_API_KEY=
+
+[Install]
+WantedBy=multi-user.target
